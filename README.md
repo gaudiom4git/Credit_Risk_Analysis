@@ -13,15 +13,69 @@ Make predictions
 classification report
 
 
-
-## Results
+## Results 
 
 Results TBD
 There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
 
+### Naive Random Oversampling
+
+![Naive Random Oversampling](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/NaiveRandomOversampling.png)
+
+* Balance Accuracy Score = 65.16% The False Negative = 33 which means the Model predicted credit card risk as Low Risk but 
+actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.01 
+* The recall(sensitivity) for predicting Low Risk(1)is 0.68 and High Risk is 0.62 
+* The F1 score for Low Risk is 0.81 and for high risk is 0.02 as precision for High risk is low.
+
+### SMOTE Oversampling
+
+![SMOTE Oversampling](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/SmoteOversampling.png)
+
+* Balance Accuracy Score = 62.42% The False Negative = 36 which means the Model predicted credit card risk as Low Risk but 
+actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.01 
+* The recall(sensitivity) for predicting Low Risk is 0.59 and High Risk is 0.66 
+* The F1 score for Low Risk is higher 0.80
+
+### Undersampling
+
+![Undersampling](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/Undersampling.png)
+
+* Balance Accuracy Score = 52.75% The False Negative = 35 which means the Model predicted credit card risk as Low Risk 
+but actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.01 
+* The recall(sensitivity) for predicting Low Risk is 0.46 and High Risk is 0.60 
+* The F1 score for low Risk is higher 0.63 and high risk is 0.01
+
+### Combination (Over and Under) Sampling-SMOTEENN algorithm to Predict Credit Risk
+
+![Combination Over and Under SMOTEEN](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/SMOTEEN.png)
+
+* Balance Accuracy Score = 52.75% The False Negative = 26 which means the Model predicted credit card risk as Low Risk 
+but actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.01 
+* The recall(sensitivity) for predicting Low Risk is 0.58 and High Risk is 0.70
+* The F1 score for Low Risk is higher 0.73 and high risk is 0.02
+
+### Balanced Random Forest Classifier
+
+![Balanced Random Forest](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/BalancedRandomForestClassifier.png)
+
+* Balance Accuracy Score = 77.91% The False Negative = 30 which means the Model predicted credit card risk as Low Risk 
+but actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.03 
+* The recall(sensitivity) for predicting Low Risk is 0.88 and High Risk is 0.67 
+* The F1 score for Low Risk is higher 0.94 and high Risk is 0.06
+
+### Easy Ensemble AdaBoost Classifier
+
+![Easy Ensemble AdaBoost](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/EasyEnsembleADABoost.png)
+
+* Balance Accuracy Score = 50.00% The False Negative = 0 .  But, I don't think these are reliable numbers.
+* The precision of prediction using this model:High Risk(1) is 1 and Low Risk(0) is 0.00.
+* The recall(sensitivity) for predicting Low Risk is 0.00 and High Risk is 1.00 
+* The F1 score for Low Risk is higher 0.00 and high risk is 0.01
+
 ## Summary
 
-Summary 
-
-    There is a summary of the results (2 pt)
-    There is a recommendation on which model to use, or there is no recommendation with a justification (3 pt)

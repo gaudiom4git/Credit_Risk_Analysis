@@ -1,1 +1,91 @@
 # Credit_Risk_Analysis
+
+## Overview - Loan Prediction Analysis
+
+This module explained how machine learning can assist with analyzing credit card risk.  Students used Pandas and dataframes to perform data preparation, 
+statiscal reasoning and machine learning practices to predict credit card risk.  
+
+Identify target (credit risk outcome)
+Identify features (attributes used in machine learning method)
+Split the data - training and testing
+Train the model (fit)
+Make predictions
+classification report
+
+
+## Results 
+
+Results TBD
+There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
+
+### Naive Random Oversampling
+
+![Naive Random Oversampling](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/NaiveRandomOversampling.png)
+
+* Balance Accuracy Score = 65.16% The False Negative = 33 which means the Model predicted credit card risk as Low Risk but 
+actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.01 
+* The recall(sensitivity) for predicting Low Risk(1)is 0.68 and High Risk is 0.62 
+* The F1 score for Low Risk is 0.81 and for high risk is 0.02 as precision for High risk is low.
+
+### SMOTE Oversampling
+
+![SMOTE Oversampling](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/SmoteOversampling.png)
+
+* Balance Accuracy Score = 62.42% The False Negative = 36 which means the Model predicted credit card risk as Low Risk but 
+actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.01 
+* The recall(sensitivity) for predicting Low Risk is 0.59 and High Risk is 0.66 
+* The F1 score for Low Risk is higher 0.80
+
+### Undersampling
+
+![Undersampling](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/Undersampling.png)
+
+* Balance Accuracy Score = 52.75% The False Negative = 35 which means the Model predicted credit card risk as Low Risk 
+but actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.01 
+* The recall(sensitivity) for predicting Low Risk is 0.46 and High Risk is 0.60 
+* The F1 score for low Risk is higher 0.63 and high risk is 0.01
+
+### Combination (Over and Under) Sampling-SMOTEENN algorithm to Predict Credit Risk
+
+![Combination Over and Under SMOTEEN](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/SMOTEEN.png)
+
+* Balance Accuracy Score = 62.48% The False Negative = 25 which means the Model predicted credit card risk as Low Risk 
+but actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.01 
+* The recall(sensitivity) for predicting Low Risk is 0.54 and High Risk is 0.71 
+* The F1 score for Low Risk is higher 0.70 and high risk is 0.02
+
+### Balanced Random Forest Classifier
+
+![Balanced Random Forest](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/BalancedRandomForestClassifier.png)
+
+* Balance Accuracy Score = 77.91% The False Negative = 30 which means the Model predicted credit card risk as Low Risk 
+but actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.03 
+* The recall(sensitivity) for predicting Low Risk is 0.87 and High Risk is 0.70 
+* The F1 score for Low Risk is higher 0.93 and high Risk is 0.06
+
+### Easy Ensemble AdaBoost Classifier
+
+![Easy Ensemble AdaBoost](https://github.com/gaudiom4git/Credit_Risk_Analysis/blob/main/Resources/EasyEnsembleADABoost.png)
+
+* Balance Accuracy Score = 93.32% The False Negative = 8 which means the Model predicted credit card risk as Low Risk but 
+actually those are High risk. 
+* The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.09.
+* The recall(sensitivity) for predicting Low Risk is 0.94 and High Risk is 0.92 
+* The F1 score for Low Risk is higher 0.97 and high risk is 0.16
+
+## Summary
+
+    There is a summary of the results (2 pt)
+    There is a recommendation on which model to use, or there is no recommendation with a justification (3 pt)
+
+Out of all the above Models, Easy Ensemble AdaBoost Classifier seems to be best the Model to predict credit Risk. 
+The Accuracy score is 95.03%. The False Negatives are only 8 it means Model predicted those low risk but those are 
+high risk, compare to other models this model have lowest False Negative that way the High Risk credit wont out number 
+the Low Risk credits. The sensitivity(Recall) for prediction low risk is 94% and High risk is also good which is 92%. 
+The F1 score for low risk is 97%. My recommendation is to use Ensembleclassifier to predict credit risk where chances 
+of high risk will be caught in the model and chances of LendingClub loosing money/loan will be less.
